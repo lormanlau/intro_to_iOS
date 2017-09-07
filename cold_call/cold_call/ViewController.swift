@@ -15,12 +15,8 @@ class ViewController: UIViewController {
     var arrIndex = 0
     
     @IBAction func callButton(_ sender: UIButton) {
+        arrIndex = Int(arc4random_uniform(UInt32(names.count)))
         updateUI()
-        if arrIndex != names.count - 1 {
-            arrIndex += 1
-        } else {
-            arrIndex = 0
-        }
     }
     
     func updateUI() {
